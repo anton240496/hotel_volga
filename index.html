@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container ">
+      <div class="header_inner">
+        <div class="header_top">
+          <a class="logo" href="#">
+            <picture>
+              <source srcset="images/logo/logo1024.svg" media="(max-width: 1024px)">
+              <source srcset="images/logo/logo1440.svg" media="(max-width: 1440px)">
+              <img src="images/logo/logo1920.svg" alt="">
+            </picture>
+          </a>
+          <div class="header_contacts">
+            <div class="header_contacts_inner">
+              <a class="header_contacts_adress"
+                href="https://yandex.ru/maps/45/cheboksary/house/yaroslavskaya_ulitsa_23k1/YE4YdAJkTUABQFtsfX11dX9iYg==/?ll=47.254456%2C56.144316&z=16">
+                Чебоксары, Ярославская, 23 корп. 1
+              </a>
+
+              <div class="header_contacts_lg">
+                <div class="lg_osnova"><a href="">RU</a><img src="images/arrow_bottom.svg" alt=""></div>
+                <!-- <div class="lg_close"><a href="">EN</a></div> -->
+              </div>
+              <a class="header_contacts_tel" href="tel:+78352320222">+7 8352 32-02-22</a>
+            </div>
+            <button class="header_top_btn contacts_btn btn">
+              Забронировать номер
+            </button>
+          </div>
+          <nav class="header_menu">
+            <ul class="header_menu_list">
+              <li class="header_menu_item">
+                <a class="header_menu_link" href="">Об отеле</a>
+              </li>
+              <li class="header_menu_item">
+                <a class="header_menu_link" href="">Номера</a>
+              </li>
+              <li class="header_menu_item">
+                <a class="header_menu_link" href="">Спецпредложения</a>
+              </li>
+              <li class="header_menu_item">
+                <a class="header_menu_link" href="">Ресторан</a>
+              </li>
+              <li class="header_menu_item">
+                <a class="header_menu_link" href="">SPA-центр</a>
+              </li>
+              <li class="header_menu_item">
+                <a class="header_menu_link" href="">Конференц-залы</a>
+              </li>
+              <li class="header_menu_item">
+                <a class="header_menu_link" href="">Услуги</a>
+              </li>
+              <li class="header_menu_item">
+                <a class="header_menu_link" href="">Контакты</a>
+              </li>
+              <li class="header_menu_item">
+                <a class="header_menu_link" href="">Еще</a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header_bottom">
+          <h2 class="title header_title gradient">Стандарт улучшенный с большой кроватью 5*</h2>
+          <div class="header_nomer">
+            <div class="header_nomer_info">
+              <p class="header_nomer_info_name">Заезд</p>
+              <div class="header_nomer_plan">
+                <p>20.07.2025</p>
+                <img src="images/arrow_bottom.svg" alt="">
+              </div>
+            </div>
+
+            <div class="header_nomer_info">
+              <p class="header_nomer_info_name">Выезд:</p>
+              <div class="header_nomer_plan">
+                <p>21.07.2025</p>
+                <img src="images/arrow_bottom.svg" alt="">
+              </div>
+            </div>
+
+            <div class="header_nomer_info">
+              <p class="header_nomer_info_name">Гости:</p>
+              <div class="header_nomer_plan">
+                <p>2 взрослых, 0 детей</p>
+                <img src="images/arrow_bottom.svg" alt="">
+              </div>
+            </div>
+
+            <button class="header_nomer_btn nomer_btn btn gradient">
+              Забронировать
+            </button>
+
+          </div>
+        </div>
+        <div class="header_admin">
+          <div class="contacts_btn gradient header_admin_img">
+            <!-- <picture>
+            <source srcset="images/header_admin_1024.svg" media="(max-width: 1024px)">
+            <img class="" src="images/header_admin.svg" alt="">
+          </picture> -->
+            <!-- <svg width="31" height="32" viewBox="0 0 31 32" fill="кув" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1_13478)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.9976 2.3678C11.5531 2.59311 11.3284 2.92035 11.2944 3.39205C11.2636 3.81756 11.3535 4.11538 11.5962 4.3919C11.9365 4.77946 12.1624 4.85172 13.1196 4.87929L13.9723 4.90382L13.955 5.35911L13.9377 5.8144L13.1321 5.94937C8.78005 6.67855 5.15467 9.356 3.20409 13.2814C2.41416 14.8711 1.96722 16.5215 1.82163 18.3866C1.78254 18.8873 1.7755 18.9066 1.60651 18.9766C1.35924 19.079 1.04614 19.4679 0.958246 19.7817C0.780784 20.4156 1.07401 21.053 1.68701 21.3657C1.90332 21.476 2.26283 21.479 15.2803 21.479C28.2977 21.479 28.6572 21.476 28.8735 21.3657C29.3271 21.1342 29.5847 20.7716 29.6426 20.2828C29.7028 19.7744 29.3697 19.1487 28.9452 18.9729C28.8466 18.9321 28.7658 18.8549 28.7657 18.8015C28.7656 18.748 28.7373 18.3955 28.7029 18.0181C28.5104 15.9107 27.731 13.6694 26.5781 11.9084C25.2532 9.88438 23.3871 8.22314 21.2772 7.18934C19.9461 6.53707 18.8671 6.19223 17.3687 5.94006L16.6229 5.81458L16.6056 5.35923L16.5883 4.90382L17.4409 4.87929C18.3742 4.85244 18.6034 4.7837 18.9283 4.43349C19.2125 4.12708 19.2928 3.89633 19.268 3.45763C19.2409 2.97781 19.0562 2.6532 18.666 2.39954L18.413 2.23509L15.3687 2.21862L12.3243 2.20215L11.9976 2.3678ZM12.3406 3.17491C12.1828 3.29479 12.117 3.53848 12.1984 3.70174C12.3419 3.98954 12.3847 3.99359 15.317 3.99449C18.0112 3.99538 18.072 3.99282 18.2259 3.87169C18.4091 3.72764 18.4377 3.44343 18.2902 3.23297L18.1974 3.10032H15.3181C13.1069 3.10032 12.416 3.11762 12.3406 3.17491ZM14.8152 5.32307L14.8327 5.75568H15.2803H15.7278L15.7453 5.32307L15.7629 4.89045H15.2803H14.7976L14.8152 5.32307ZM14.057 6.71543C13.223 6.82964 12.8862 6.89128 12.237 7.04863C8.62204 7.92484 5.55548 10.4289 3.91877 13.8411C3.17491 15.3918 2.68966 17.429 2.68966 19.0009C2.68966 19.4137 2.54353 19.6889 2.32436 19.6889C2.25943 19.6889 2.13042 19.7281 2.03758 19.7762C1.76351 19.9179 1.71714 20.171 1.91829 20.4267L2.04193 20.5839H15.2803H28.5186L28.6422 20.4267C28.8431 20.1714 28.7836 19.9166 28.4864 19.7583C28.3886 19.7062 25.3021 19.6889 16.0941 19.6889H3.83206L3.70843 19.5316C3.50757 19.2764 3.56701 19.0215 3.86423 18.8632C3.96209 18.8111 6.97208 18.7938 15.9375 18.7938H27.8803L27.8419 18.391C27.6597 16.4837 27.2854 15.1246 26.5314 13.6323C25.8383 12.2607 25.0682 11.2128 23.9992 10.1868C22.1417 8.40394 19.9933 7.32115 17.3357 6.82839C16.8257 6.73387 14.5063 6.65397 14.057 6.71543ZM5.43907 22.4417C4.65105 22.5725 3.98882 23.1337 3.71177 23.9056L3.61456 24.1765L3.06296 24.3158C1.90803 24.6076 1.00843 25.3175 0.457367 26.372C0.127266 27.0036 0.0556608 27.3233 0.0205742 28.3211L-0.0112305 29.226L0.143079 29.3803L0.297388 29.5346H15.2834H30.2695L30.4426 29.3493C30.6145 29.1653 30.6157 29.1586 30.6157 28.4208C30.6157 27.9407 30.5946 27.6908 30.5561 27.7146C30.5228 27.7352 30.4964 27.6896 30.4964 27.6114C30.4964 27.5343 30.4565 27.3182 30.4078 27.1311C30.0508 25.7607 28.7654 24.5518 27.3638 24.2685L26.9482 24.1845L26.8461 23.8991C26.5712 23.1306 25.8903 22.5635 25.0844 22.4315C24.6376 22.3583 5.88284 22.3681 5.43907 22.4417ZM5.40816 23.3436C5.15354 23.4109 4.59914 23.91 4.59914 24.0718C4.59914 24.1548 5.68288 24.1642 15.3135 24.1642H26.0278L25.92 23.9785C25.7561 23.6962 25.3877 23.4085 25.0961 23.335C24.7399 23.2453 5.74876 23.2536 5.40816 23.3436ZM3.37648 25.1294C2.55701 25.2857 1.62262 26.0188 1.23948 26.8062C0.99554 27.3075 0.899529 27.7166 0.899529 28.2546V28.6395H15.2803H29.661L29.6601 28.2368C29.659 27.707 29.5239 27.1536 29.2874 26.71C29.0299 26.2269 28.4438 25.6507 27.9761 25.4211C27.2028 25.0413 27.904 25.0608 15.2206 25.067C8.18883 25.0704 3.55782 25.0948 3.37648 25.1294ZM0.0276751 28.4904C0.0277347 28.917 0.0372821 29.0837 0.048739 28.8608C0.0602555 28.6379 0.0601958 28.2889 0.04856 28.0851C0.0369838 27.8814 0.0275557 28.0637 0.0276751 28.4904Z"
+                  fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_13478">
+                  <rect width="30.5516" height="30.5516" fill="white" transform="translate(-0.00341797 0.593018)" />
+                </clipPath>
+              </defs>
+            </svg> -->
+            <svg width="31" height="31" viewBox="0 0 31 32" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff" />
+                  <stop offset="100%" stop-color="#fff" />
+                </linearGradient>
+                <clipPath id="clip0_1_13478">
+                  <rect width="30.5516" height="30.5516" fill="white" transform="translate(-0.00341797 0.593018)" />
+                </clipPath>
+              </defs>
+              <g clip-path="url(#clip0_1_13478)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.9976 2.3678C11.5531 2.59311 11.3284 2.92035 11.2944 3.39205C11.2636 3.81756 11.3535 4.11538 11.5962 4.3919C11.9365 4.77946 12.1624 4.85172 13.1196 4.87929L13.9723 4.90382L13.955 5.35911L13.9377 5.8144L13.1321 5.94937C8.78005 6.67855 5.15467 9.356 3.20409 13.2814C2.41416 14.8711 1.96722 16.5215 1.82163 18.3866C1.78254 18.8873 1.7755 18.9066 1.60651 18.9766C1.35924 19.079 1.04614 19.4679 0.958246 19.7817C0.780784 20.4156 1.07401 21.053 1.68701 21.3657C1.90332 21.476 2.26283 21.479 15.2803 21.479C28.2977 21.479 28.6572 21.476 28.8735 21.3657C29.3271 21.1342 29.5847 20.7716 29.6426 20.2828C29.7028 19.7744 29.3697 19.1487 28.9452 18.9729C28.8466 18.9321 28.7658 18.8549 28.7657 18.8015C28.7656 18.748 28.7373 18.3955 28.7029 18.0181C28.5104 15.9107 27.731 13.6694 26.5781 11.9084C25.2532 9.88438 23.3871 8.22314 21.2772 7.18934C19.9461 6.53707 18.8671 6.19223 17.3687 5.94006L16.6229 5.81458L16.6056 5.35923L16.5883 4.90382L17.4409 4.87929C18.3742 4.85244 18.6034 4.7837 18.9283 4.43349C19.2125 4.12708 19.2928 3.89633 19.268 3.45763C19.2409 2.97781 19.0562 2.6532 18.666 2.39954L18.413 2.23509L15.3687 2.21862L12.3243 2.20215L11.9976 2.3678ZM12.3406 3.17491C12.1828 3.29479 12.117 3.53848 12.1984 3.70174C12.3419 3.98954 12.3847 3.99359 15.317 3.99449C18.0112 3.99538 18.072 3.99282 18.2259 3.87169C18.4091 3.72764 18.4377 3.44343 18.2902 3.23297L18.1974 3.10032H15.3181C13.1069 3.10032 12.416 3.11762 12.3406 3.17491ZM14.8152 5.32307L14.8327 5.75568H15.2803H15.7278L15.7453 5.32307L15.7629 4.89045H15.2803H14.7976L14.8152 5.32307ZM14.057 6.71543C13.223 6.82964 12.8862 6.89128 12.237 7.04863C8.62204 7.92484 5.55548 10.4289 3.91877 13.8411C3.17491 15.3918 2.68966 17.429 2.68966 19.0009C2.68966 19.4137 2.54353 19.6889 2.32436 19.6889C2.25943 19.6889 2.13042 19.7281 2.03758 19.7762C1.76351 19.9179 1.71714 20.171 1.91829 20.4267L2.04193 20.5839H15.2803H28.5186L28.6422 20.4267C28.8431 20.1714 28.7836 19.9166 28.4864 19.7583C28.3886 19.7062 25.3021 19.6889 16.0941 19.6889H3.83206L3.70843 19.5316C3.50757 19.2764 3.56701 19.0215 3.86423 18.8632C3.96209 18.8111 6.97208 18.7938 15.9375 18.7938H27.8803L27.8419 18.391C27.6597 16.4837 27.2854 15.1246 26.5314 13.6323C25.8383 12.2607 25.0682 11.2128 23.9992 10.1868C22.1417 8.40394 19.9933 7.32115 17.3357 6.82839C16.8257 6.73387 14.5063 6.65397 14.057 6.71543ZM5.43907 22.4417C4.65105 22.5725 3.98882 23.1337 3.71177 23.9056L3.61456 24.1765L3.06296 24.3158C1.90803 24.6076 1.00843 25.3175 0.457367 26.372C0.127266 27.0036 0.0556608 27.3233 0.0205742 28.3211L-0.0112305 29.226L0.143079 29.3803L0.297388 29.5346H15.2834H30.2695L30.4426 29.3493C30.6145 29.1653 30.6157 29.1586 30.6157 28.4208C30.6157 27.9407 30.5946 27.6908 30.5561 27.7146C30.5228 27.7352 30.4964 27.6896 30.4964 27.6114C30.4964 27.5343 30.4565 27.3182 30.4078 27.1311C30.0508 25.7607 28.7654 24.5518 27.3638 24.2685L26.9482 24.1845L26.8461 23.8991C26.5712 23.1306 25.8903 22.5635 25.0844 22.4315C24.6376 22.3583 5.88284 22.3681 5.43907 22.4417ZM5.40816 23.3436C5.15354 23.4109 4.59914 23.91 4.59914 24.0718C4.59914 24.1548 5.68288 24.1642 15.3135 24.1642H26.0278L25.92 23.9785C25.7561 23.6962 25.3877 23.4085 25.0961 23.335C24.7399 23.2453 5.74876 23.2536 5.40816 23.3436ZM3.37648 25.1294C2.55701 25.2857 1.62262 26.0188 1.23948 26.8062C0.99554 27.3075 0.899529 27.7166 0.899529 28.2546V28.6395H15.2803H29.661L29.6601 28.2368C29.659 27.707 29.5239 27.1536 29.2874 26.71C29.0299 26.2269 28.4438 25.6507 27.9761 25.4211C27.2028 25.0413 27.904 25.0608 15.2206 25.067C8.18883 25.0704 3.55782 25.0948 3.37648 25.1294ZM0.0276751 28.4904C0.0277347 28.917 0.0372821 29.0837 0.048739 28.8608C0.0602555 28.6379 0.0601958 28.2889 0.04856 28.0851C0.0369838 27.8814 0.0275557 28.0637 0.0276751 28.4904Z"
+                  fill="url(#iconGradient)" />
+              </g>
+            </svg>
+
+          </div>
+          <p>Онлайн-
+            администратор</p>
+        </div>
+        <button class="header_menu_mobile_btn">
+          <img src="images/menu_mobile_btn.svg" alt="">
+        </button>
+
+      </div>
+    </div>
+  </header>
+   <main class="main">
+    <div class="container">
+      <div class="main_link">
+        <a class="" href="">Главная</a>
+        /
+        <a href="">Номера</a>
+        /
+        <a href="">Двухместный стандарт</a>
+      </div>
+      <div class="nomerabout">
+        <div class="nomerabout_foto">
+          <picture>
+            <source srcset="images/nomer/nomer_mobile.jpg" media="(max-width: 768px)">
+            <source srcset="images/nomer/nomer_1024.jpg" media="(max-width: 1024px)">
+            <source srcset="images/nomer/nomer_1440.jpg" media="(max-width: 1440px)">
+            <img src="images/nomer/nomer.jpg" alt="">
+          </picture>
+
+          <picture>
+            <source srcset="images/nomer/nomer_mobile.jpg" media="(max-width: 768px)">
+            <source srcset="images/nomer/nomer_1024.jpg" media="(max-width: 1024px)">
+            <source srcset="images/nomer/nomer_1440.jpg" media="(max-width: 1440px)">
+            <img src="images/nomer/nomer.jpg" alt="">
+          </picture>
+
+          <picture>
+            <source srcset="images/nomer/nomer_mobile.jpg" media="(max-width: 768px)">
+            <source srcset="images/nomer/nomer_1024.jpg" media="(max-width: 1024px)">
+            <source srcset="images/nomer/nomer_1440.jpg" media="(max-width: 1440px)">
+            <img src="images/nomer/nomer.jpg" alt="">
+          </picture> 
+          <!-- <img src="images/nomer/nomer1.jpg" alt="">
+          <img src="images/nomer/nomer2.jpg" alt=""> -->
+        </div>
+
+        <div class="nomerabout_info">
+          <div class="nomerabout_info_osnova">
+            <div class="nomerabout_info_osnova_col">
+              <div class="nomerabout_info_osnova_name">
+                <picture>
+                  <source srcset="images/gost_1024.svg" media="(max-width: 1024px)">
+                  <img src="images/gost.svg" alt="">
+                </picture>
+                <p>до 2-х гостей</p>
+              </div>
+              <p class="nomerabout_info_osnova_price">12500 ₽</p>
+              <p class="nomerabout_info_osnova_razm">одноместное размещение</p>
+            </div>
+
+            <div class="nomerabout_info_osnova_col">
+              <div class="nomerabout_info_osnova_name">
+                <picture>
+                  <source srcset="images/nomerm2_1024.svg" media="(max-width: 1024px)">
+                  <img src="images/nomerm2.svg" alt="">
+                </picture>
+                <p>23-25 м²</p>
+              </div>
+              <p class="nomerabout_info_osnova_price">16500 ₽</p>
+              <p class="nomerabout_info_osnova_razm">двухместное размещение</p>
+            </div>
+          </div>
+          <i class="nomerabout_info_aktyal">актуальная стоимость указана в модуле бронирования</i>
+          <div class="nomerabout_info_opisanie contentfont">
+            <p class="nomerabout_info_text">Номер Джуниор сьют - это просторный и комфортабельный номер, который
+              идеально
+              подойдет для путешествий с семьей или друзьями.</p>
+            <br>
+            <p class="nomerabout_info_text">Номер оборудован всем необходимым для отдыха. В вашем распоряжении большая
+              кровать King Size, а также 2 односпальные кровати для комфортного размещения наших маленьких гостей.</p>
+          </div>
+
+          <button class="black_btn contacts_btn btn">
+            Забронировать номер
+          </button>
+        </div>
+      </div>
+
+      <div class="enable contentfont">
+        <div class="enable_osnova">
+          <p class="enable_name">В стоимость включено:</p>
+          <ul class="enable_osnova_list">
+            <li class="enable_osnova_item">
+              <picture>
+                <source srcset="images/enable/enable_1_mobile.svg" media="(max-width: 768px)">
+                 <source srcset="images/enable/enable_1_1024.svg" media="(max-width: 1024px)">
+                <img src="images/enable/enable_1.svg" alt="">
+              </picture>Завтрак «шведский стол»
+            </li>
+            <li class="enable_osnova_item">
+              <picture>
+                <source srcset="images/enable/enable_2_mobile.svg" media="(max-width: 768px)">
+                <source srcset="images/enable/enable_2_1024.svg" media="(max-width: 1024px)">
+                <img src="images/enable/enable_2.svg" alt="">
+              </picture>Акватермальная зона
+            </li>
+            <li class="enable_osnova_item">
+              <picture>
+                <source srcset="images/enable/enable_3_mobile.svg" media="(max-width: 768px)">
+                <source srcset="images/enable/enable_3_1024.svg" media="(max-width: 1024px)">
+                <img src="images/enable/enable_3.svg" alt="">
+              </picture>Фитнес-зал
+            </li>
+            <li class="enable_osnova_item">
+              <picture>
+                <source srcset="images/enable/enable_4_mobile.svg" media="(max-width: 768px)">
+                <source srcset="images/enable/enable_4_1024.svg" media="(max-width: 1024px)">
+                <img src="images/enable/enable_4.svg" alt="">
+              </picture>Питьевая вода, чай, кофе
+            </li>
+          </ul>
+        </div>
+        <div class="enable_nomer">
+          <p class="enable_name">В номере</p>
+          <ul class="enable_nomer_list enable_nomer_list_column">
+            <li class="enable_nomer_item">рабочий стол</li>
+            <li class="enable_nomer_item">журнальный столик</li>
+            <li class="enable_nomer_item">телевизор</li>
+            <li class="enable_nomer_item">Wi-Fi</li>
+            <li class="enable_nomer_item">телефон</li>
+            <li class="enable_nomer_item">багажная тумба</li>
+            <li class="enable_nomer_item">зеркало</li>
+            <li class="enable_nomer_item">кресло</li>
+            <li class="enable_nomer_item">шкаф для одежды</li>
+            <li class="enable_nomer_item">диван</li>
+            <li class="enable_nomer_item">мебельный гарнитур</li>
+
+            <li class="enable_nomer_item">стулья</li>
+            <li class="enable_nomer_item">тумбы</li>
+            <li class="enable_nomer_item">электронные замки</li>
+            <li class="enable_nomer_item">вешалки</li>
+            <li class="enable_nomer_item">сейф</li>
+            <li class="enable_nomer_item">кондиционер</li>
+            <li class="enable_nomer_item">фен</li>
+            <li class="enable_nomer_item">светильник</li>
+            <li class="enable_nomer_item">настольные лампы</li>
+            <li class="enable_nomer_item">двуспальная кровать</li>
+            <li class="enable_nomer_item">мини-холодильник</li>
+          </ul>
+        </div>
+        <div class="enable_nomer enable_nomer_baf">
+          <p class="enable_name">В ванной комнате</p>
+          <ul class="enable_nomer_list ">
+            <li class="enable_nomer_item">банные полотенца</li>
+            <li class="enable_nomer_item">косметическое зеркало</li>
+            <li class="enable_nomer_item">косметические средства</li>
+            <li class="enable_nomer_item">душевая кабина</li>
+            <li class="enable_nomer_item">тапочки</li>
+            <li class="enable_nomer_item">тропический душ</li>
+            <li class="enable_nomer_item">гигиенические средства</li>
+            <li class="enable_nomer_item">банные принадлежности</li>
+            <li class="enable_nomer_item">халаты</li>
+            <li class="enable_nomer_item">биде</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="rules">
+        <div class="rules_spisok">
+          <h3 class="title rules_title">Правила проживания</h3>
+          <ul class="contentfont rules_spisok_list">
+            <li class="rules_spisok_item">
+              <div class="rules_spisok_que">
+                <p>Время заезда и выезда</p>
+                <picture>
+                  <source srcset="images/plus_mobile.svg" media="(max-width: 768px)">
+                  <img src="images/plus.svg" alt="">
+                </picture>
+              </div>
+              <ul class="rules_spisok_otvet">
+                <li class="rules_spisok_otvet_item"><span>Заезд (Check-in):</span>
+                  с 14:00. Ранний заезд возможен при наличии свободных номеров и обсуждается
+                  индивидуально с администрацией.
+                </li>
+                <li class="rules_spisok_otvet_item"><span>Выезд (Check-out):</span>
+                  до 12:00. Поздний выезд предоставляется по запросу (за дополнительную плату и при
+                  наличии возможности).
+                </li>
+
+              </ul>
+            </li>
+
+            <li class="rules_spisok_item">
+              <div class="rules_spisok_que">
+                <p>Документы для заселения</p>
+                <picture>
+                  <source srcset="images/plus_mobile.svg" media="(max-width: 768px)">
+                  <img src="images/plus.svg" alt="">
+                </picture>
+              </div>
+              <ul class="rules_spisok_otvet">
+                <li class="rules_spisok_otvet_item">
+                  Для заселения необходим действующий<span> паспорт или иной документ, удостоверяющий личность</span>
+                  <span class="otvet_item_vosk">(водительское удостоверение не принимается).</span>
+                </li>
+                <li class="rules_spisok_otvet_item"><span>Для иностранных гостей:</span>
+                  обязательно предоставление действующей визы и миграционной карты.
+                </li>
+                <li class="rules_spisok_otvet_item"><span>Важно:</span>
+                  Поселение производится только при наличии оригиналов документов.
+                  <span class="otvet_item_vosk">Ксерокопии и фотографии не принимаются.</span>
+                </li>
+              </ul>
+            </li>
+
+            <li class="rules_spisok_item">
+              <div class="rules_spisok_que">
+                <p>Заселение с детьми</p>
+                <picture>
+                  <source srcset="images/plus_mobile.svg" media="(max-width: 768px)">
+                  <img src="images/plus.svg" alt="">
+                </picture>
+              </div>
+              <ul class="rules_spisok_otvet">
+                <li class="rules_spisok_otvet_item"><span>Дети до 5 лет (включительно)</span>
+                  проживают бесплатно (без предоставления отдельного места) при размещении
+                  на существующих кроватях вместе с родителями.
+                </li>
+                <li class="rules_spisok_otvet_item">
+                  Для детей младшего возраста по предварительному запросу предоставляется
+                  <span>детская кроватка</span>
+                  <span class="otvet_item_vosk">(бесплатно или за дополнительную плату, в зависимости от категории
+                    номера).</span>
+                </li>
+                <li class="rules_spisok_otvet_item"><span>Дети от 6 лет и старше</span>
+                  считаются взрослыми и размещаются на отдельное место.
+                </li>
+              </ul>
+            </li>
+
+            <li class="rules_spisok_item">
+              <div class="rules_spisok_que">
+                <p>Отмена бронирования</p>
+                <picture>
+                  <source srcset="images/plus_mobile.svg" media="(max-width: 768px)">
+                  <img src="images/plus.svg" alt="">
+                </picture>
+              </div>
+              <ul class="rules_spisok_otvet">
+                <li class="rules_spisok_otvet_item"><span>Бесплатная отмена</span>
+                  возможна не позднее, чем <span class="otvet_item_vosk">за 48 часов</span> до даты заезда.
+                </li>
+                <li class="rules_spisok_otvet_item"><span>При отмене бронирования</span>
+                  позднее, чем <span class="otvet_item_vosk">за 48 часов</span>, или при не заезде (no-show),
+                  удерживается штраф в
+                  размере стоимости первой ночи проживания.
+                </li>
+                <li class="rules_spisok_otvet_item"><span>Для бронирований в периоды сезона с высоким спросом и
+                    специальных акций</span>
+                  могут действовать особые условия отмены
+                  (указываются при бронировании).
+                </li>
+              </ul>
+            </li>
+
+            <li class="rules_spisok_item">
+              <div class="rules_spisok_que">
+                <p>Проживание с животными</p>
+                <picture>
+                  <source srcset="images/plus_mobile.svg" media="(max-width: 768px)">
+                  <img src="images/plus.svg" alt="">
+                </picture>
+              </div>
+              <ul class="rules_spisok_otvet">
+                <li class="rules_spisok_otvet_item">
+                  Размещение с домашними питомцами (кошки, собаки мелких и средних пород) <span>возможно только по
+                    предварительному согласованию</span> с администрацией отеля.
+                </li>
+                <li class="rules_spisok_otvet_item"><span>За размещение с животным, без дополнительного
+                    согласования,</span>
+                  взимается дополнительная плата в размере <span class="otvet_item_vosk">(5000 рублей)</span> за весь
+                  период
+                  проживания.
+                </li>
+                <li class="rules_spisok_otvet_item"><span>Гости несут полную материальную ответственность</span>
+                  за любые убытки, причиненные животным имуществу отеля.
+                  Просим не оставлять питомцев одних в номере.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="rules_kratko gradient">
+          <h3 class="title rules_kratko_title">Прямое бронирование без лишних действий</h3>
+          <p class="contentfont rules_kratko_text">Забронируйте номер без сторонних комиссий и с прямой сервисной
+            поддержкой отеля</p>
+          <button class="rules_btn btn">
+            Забронировать
+          </button>
+        </div>
+      </section>
+      <section class="othernomer">
+        <h2 class="title othernomer_title">Другие номера</h2>
+        <div class="othernomer_inner">
+          <div class="othernomer_about">
+            <div class="othernomer_about_picture" style="background-image: url(images/othernomer/othernomer.jpg);">
+              <div class="othernomer_about_osn">
+                <p class="othernomer_about_xarakter">до 3-х мест</p>
+                <p class="othernomer_about_xarakter">35 кв.м.</p>
+                <p class="othernomer_about_price">от 16 700 ₽</p>
+              </div>
+            </div>
+
+            <div class="othernomer_about_info">
+              <p class="othernomer_about_name">Семейный сьют</p>
+              <p class="contentfont othernomer_about_text">Просторный и комфортабельный номер, который идеально подойдёт
+                для путешествий с семьёй или друзьями</p>
+
+              <button class="othernomer_about_btn nomer_btn btn gradient">
+                Забронировать
+              </button>
+              <button class="othernomer_about_podrob black_btn contacts_btn btn">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+          <div class="othernomer_about">
+            <div class="othernomer_about_picture" style="background-image: url(images/othernomer/othernomer.jpg);">
+              <div class="othernomer_about_osn">
+                <p class="othernomer_about_xarakter">до 3-х мест</p>
+                <p class="othernomer_about_xarakter">35 кв.м.</p>
+                <p class="othernomer_about_price">от 16 700 ₽</p>
+              </div>
+            </div>
+
+            <div class="othernomer_about_info">
+              <p class="othernomer_about_name">Семейный сьют</p>
+              <p class="contentfont othernomer_about_text">Просторный и комфортабельный номер, который идеально подойдёт
+                для путешествий с семьёй или друзьями</p>
+
+              <button class="othernomer_about_btn nomer_btn btn gradient">
+                Забронировать
+              </button>
+              <button class="othernomer_about_podrob black_btn contacts_btn btn">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+          <div class="othernomer_about">
+            <div class="othernomer_about_picture" style="background-image: url(images/othernomer/othernomer.jpg);">
+              <div class="othernomer_about_osn">
+                <p class="othernomer_about_xarakter">до 3-х мест</p>
+                <p class="othernomer_about_xarakter">35 кв.м.</p>
+                <p class="othernomer_about_price">от 16 700 ₽</p>
+              </div>
+            </div>
+
+            <div class="othernomer_about_info">
+              <p class="othernomer_about_name">Семейный сьют</p>
+              <p class="contentfont othernomer_about_text">Просторный и комфортабельный номер, который идеально подойдёт
+                для путешествий с семьёй или друзьями</p>
+
+              <button class="othernomer_about_btn nomer_btn btn gradient">
+                Забронировать
+              </button>
+              <button class="othernomer_about_podrob black_btn contacts_btn btn">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+
+           <div class="othernomer_about">
+            <div class="othernomer_about_picture" style="background-image: url(images/othernomer/othernomer.jpg);">
+              <div class="othernomer_about_osn">
+                <p class="othernomer_about_xarakter">до 3-х мест</p>
+                <p class="othernomer_about_xarakter">35 кв.м.</p>
+                <p class="othernomer_about_price">от 16 700 ₽</p>
+              </div>
+            </div>
+
+            <div class="othernomer_about_info">
+              <p class="othernomer_about_name">Семейный сьют</p>
+              <p class="contentfont othernomer_about_text">Просторный и комфортабельный номер, который идеально подойдёт
+                для путешествий с семьёй или друзьями</p>
+
+              <button class="othernomer_about_btn nomer_btn btn gradient">
+                Забронировать
+              </button>
+              <button class="othernomer_about_podrob black_btn contacts_btn btn">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+
+
+           <div class="othernomer_about">
+            <div class="othernomer_about_picture" style="background-image: url(images/othernomer/othernomer.jpg);">
+              <div class="othernomer_about_osn">
+                <p class="othernomer_about_xarakter">до 3-х мест</p>
+                <p class="othernomer_about_xarakter">35 кв.м.</p>
+                <p class="othernomer_about_price">от 16 700 ₽</p>
+              </div>
+            </div>
+
+            <div class="othernomer_about_info">
+              <p class="othernomer_about_name">Семейный сьют</p>
+              <p class="contentfont othernomer_about_text">Просторный и комфортабельный номер, который идеально подойдёт
+                для путешествий с семьёй или друзьями</p>
+
+              <button class="othernomer_about_btn nomer_btn btn gradient">
+                Забронировать
+              </button>
+              <button class="othernomer_about_podrob black_btn contacts_btn btn">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+
+
+           <div class="othernomer_about">
+            <div class="othernomer_about_picture" style="background-image: url(images/othernomer/othernomer.jpg);">
+              <div class="othernomer_about_osn">
+                <p class="othernomer_about_xarakter">до 3-х мест</p>
+                <p class="othernomer_about_xarakter">35 кв.м.</p>
+                <p class="othernomer_about_price">от 16 700 ₽</p>
+              </div>
+            </div>
+
+            <div class="othernomer_about_info">
+              <p class="othernomer_about_name">Семейный сьют</p>
+              <p class="contentfont othernomer_about_text">Просторный и комфортабельный номер, который идеально подойдёт
+                для путешествий с семьёй или друзьями</p>
+
+              <button class="othernomer_about_btn nomer_btn btn gradient">
+                Забронировать
+              </button>
+              <button class="othernomer_about_podrob black_btn contacts_btn btn">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+
+
+           <div class="othernomer_about">
+            <div class="othernomer_about_picture" style="background-image: url(images/othernomer/othernomer.jpg);">
+              <div class="othernomer_about_osn">
+                <p class="othernomer_about_xarakter">до 3-х мест</p>
+                <p class="othernomer_about_xarakter">35 кв.м.</p>
+                <p class="othernomer_about_price">от 16 700 ₽</p>
+              </div>
+            </div>
+
+            <div class="othernomer_about_info">
+              <p class="othernomer_about_name">Семейный сьют</p>
+              <p class="contentfont othernomer_about_text">Просторный и комфортабельный номер, который идеально подойдёт
+                для путешествий с семьёй или друзьями</p>
+
+              <button class="othernomer_about_btn nomer_btn btn gradient">
+                Забронировать
+              </button>
+              <button class="othernomer_about_podrob black_btn contacts_btn btn">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+
+           <div class="othernomer_about">
+            <div class="othernomer_about_picture" style="background-image: url(images/othernomer/othernomer.jpg);">
+              <div class="othernomer_about_osn">
+                <p class="othernomer_about_xarakter">до 3-х мест</p>
+                <p class="othernomer_about_xarakter">35 кв.м.</p>
+                <p class="othernomer_about_price">от 16 700 ₽</p>
+              </div>
+            </div>
+
+            <div class="othernomer_about_info">
+              <p class="othernomer_about_name">Семейный сьют</p>
+              <p class="contentfont othernomer_about_text">Просторный и комфортабельный номер, который идеально подойдёт
+                для путешествий с семьёй или друзьями</p>
+
+              <button class="othernomer_about_btn nomer_btn btn gradient">
+                Забронировать
+              </button>
+              <button class="othernomer_about_podrob black_btn contacts_btn btn">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+
+           <div class="othernomer_about">
+            <div class="othernomer_about_picture" style="background-image: url(images/othernomer/othernomer.jpg);">
+              <div class="othernomer_about_osn">
+                <p class="othernomer_about_xarakter">до 3-х мест</p>
+                <p class="othernomer_about_xarakter">35 кв.м.</p>
+                <p class="othernomer_about_price">от 16 700 ₽</p>
+              </div>
+            </div>
+
+            <div class="othernomer_about_info">
+              <p class="othernomer_about_name">Семейный сьют</p>
+              <p class="contentfont othernomer_about_text">Просторный и комфортабельный номер, который идеально подойдёт
+                для путешествий с семьёй или друзьями</p>
+
+              <button class="othernomer_about_btn nomer_btn btn gradient">
+                Забронировать
+              </button>
+              <button class="othernomer_about_podrob black_btn contacts_btn btn">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+ <footer class="footer">
+    <div class="container footer_wap">
+      <div class=" footer_top">
+        <div class="contentfont footer_inner">
+          <div class="footer_left">
+            <a class="logo" href="#">
+              <picture>
+                <source srcset="images/logo/logo1024.svg" media="(max-width: 1024px)">
+                <source srcset="images/logo/logo1440.svg" media="(max-width: 1440px)">
+                <img src="images/logo/logo1920.svg" alt="">
+              </picture>
+            </a>
+            <div class="footer_address">
+              <a href="https://yandex.ru/maps/45/cheboksary/house/yaroslavskaya_ulitsa_23k1/YE4YdAJkTUABQFtsfX11dX9iYg==/?ll=47.254456%2C56.144316&z=16"
+                class="footer_address_karta">
+                Чебоксары, Ярославская, 23 корп. 1</a>
+              <a class="footer_address_tel" href="tel:+78352320222">+7 8352 32 02 22</a>
+              <a class="footer_address_tel" href="tel:+79050282476">+7 905 028 24 76</a>
+            </div>
+          </div>
+          <div class="footer_right">
+            <div class="footer_right_column">
+              <p class="footer_right_name gradient">Об отеле</p>
+              <ul class="footer_right_list">
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">О “Волге Премиум”</a>
+                </li>
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">Услуги отеля</a>
+                </li>
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">Спецпредложения</a>
+                </li>
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">Контакты и реквизиты</a>
+                </li>
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">Вакансии</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer_right_column">
+              <p class="footer_right_name gradient">Инфраструктура</p>
+              <ul class="footer_right_list">
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">Ресторан “Волга”</a>
+                </li>
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">СПА & Фитнес центр</a>
+                </li>
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">Конференц-залы</a>
+                </li>
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">Банкетные залы</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer_right_column">
+              <p class="footer_right_name gradient">Проживание</p>
+              <ul class="footer_right_list">
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">Номера категории 5*</a>
+                </li>
+                <li class="footer_right_item">
+                  <a class="footer_right_link" href="">Номера категории 4*</a>
+                </li>
+              </ul>
+              <button class="footer_btn contacts_btn btn">
+                Забронировать
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="footer_podval">
+        <p class="footer_god">2025 © “Волга Премиум СПА Отель “</p>
+        <div class="footer_podval_link">
+          <a href="" class="footer_podval_link_text">правовая информация</a>
+          <a href="" class="footer_podval_link_text">разработка сайта</a>
+        </div>
+      </div>
+
+
+    </div>
+  </footer>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отель "Премиум" - Главная</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            text-align: center;
+            margin: 20px 0 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 30px 0 20px;
+            color: #2c3e50;
+            font-size: 1.8rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #3498db;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        /* Стили для первого слайдера */
+        .hotel-slider {
+            position: relative;
+            width: 100%;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .slides-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 400px;
+        }
+        
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .slide-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+            color: white;
+            padding: 20px;
+        }
+        
+        .slide-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .slide-description {
+            font-size: 16px;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+        
+        /* Контейнер для стрелок и точек первого слайдера */
+        .slider-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding: 0 10px;
+        }
+        
+        /* Стрелки для первого слайдера (под фото) */
+        .slider-arrows {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .arrow {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            color: #2c3e50;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .arrow:hover {
+            background-color: rgba(255, 255, 255, 0.95);
+            transform: scale(1.05);
+        }
+        
+        /* Точки для первого слайдера */
+        .dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #dfe6e9;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot.active {
+            background-color: #3498db;
+            transform: scale(1.2);
+        }
+        
+        /* Миниатюры */
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            margin: 20px auto 30px;
+            flex-wrap: wrap;
+        }
+        
+        .thumb {
+            width: 110px;
+            height: 75px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.75;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .thumb:hover {
+            opacity: 0.9;
+            transform: translateY(-3px);
+        }
+        
+        .thumb.active {
+            opacity: 1;
+            border-color: #3498db;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Стили для второго слайдера (номера отеля) */
+        .rooms-slider {
+            position: relative;
+            width: 100%;
+            margin: 30px auto;
+            overflow: hidden;
+        }
+        
+        .rooms-slides-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .room-slide {
+            flex: 0 0 100%;
+            padding: 42px;
+            transition: all 0.3s ease;
+        }
+        
+        .room-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .room-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .room-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .room-card:hover .room-image img {
+            transform: scale(1.05);
+        }
+        
+        .room-details {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .room-name {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .room-description {
+            color: #7f8c8d;
+            margin-bottom: 12px;
+            flex-grow: 1;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        
+        .room-price {
+            font-size: 20px;
+            color: #e74c3c;
+            font-weight: 700;
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .price-period {
+            font-size: 13px;
+            color: #95a5a6;
+            font-weight: normal;
+        }
+        
+        .book-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 14px;
+        }
+        
+        .book-btn:hover {
+            background: #2980b9;
+        }
+        
+        /* Стрелки для слайдера номеров */
+        .rooms-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            border: none;
+            color: #2c3e50;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .rooms-arrow:hover {
+            background-color: #3498db;
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .rooms-arrow.prev {
+            left: 10px;
+        }
+        
+        .rooms-arrow.next {
+            right: 10px;
+        }
+        
+        /* Точки для мобильной версии слайдера номеров */
+        .rooms-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .room-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #dfe6e9;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .room-dot.active {
+            background-color: #3498db;
+            transform: scale(1.2);
+        }
+        
+        /* Адаптивность */
+        @media (min-width: 576px) {
+            .room-slide {
+                flex: 0 0 50%;
+            }
+            
+            .slides-container {
+                height: 350px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .room-slide {
+                flex: 0 0 33.333333%;
+            }
+            
+            .slides-container {
+                height: 400px;
+            }
+            
+            .rooms-arrow {
+                display: flex;
+            }
+            
+            .rooms-dots {
+                display: none;
+            }
+            
+            .slide-title {
+                font-size: 28px;
+            }
+            
+            .slide-description {
+                font-size: 18px;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            /* .room-slide {
+                flex: 0 0 25%;
+            }
+             */
+            .slides-container {
+                height: 450px;
+            }
+            
+            .thumb {
+                width: 130px;
+                height: 90px;
+            }
+            
+            .rooms-arrow.prev {
+                left: -20px;
+            }
+            
+            .rooms-arrow.next {
+                right: -20px;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .room-slide {
+                flex: 0 0 31%;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .slider-arrows {
+                display: none;
+            }
+            
+            .rooms-arrow {
+                display: none;
+            }
+            
+            .rooms-dots {
+                display: flex;
+            }
+            
+            .slide-content {
+                padding: 15px;
+            }
+            
+            .slide-title {
+                font-size: 20px;
+            }
+            
+            .slide-description {
+                font-size: 14px;
+            }
+            
+            .thumb {
+                width: 90px;
+                height: 65px;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .room-price {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .book-btn {
+                align-self: flex-end;
+            }
+            
+            header {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px 12px 0 0;
+            margin-top: auto;
+        }
+        
+        /* Гарантия отсутствия горизонтального скролла */
+        body, html {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Отель "Премиум Класс"</h1>
+            <p class="subtitle">Роскошный отдых для ценителей комфорта</p>
+        </header>
+        
+        <h2 class="section-title">Галерея отеля</h2>
+        
+        <div class="hotel-slider">
+            <div class="slides-container">
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Отель 1">
+                    <div class="slide-content">
+                        <h3 class="slide-title">Роскошные апартаменты</h3>
+                        <p class="slide-description">Просторные номера с видом на море и современным дизайном</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Отель 2">
+                    <div class="slide-content">
+                        <h3 class="slide-title">Спа-комплекс</h3>
+                        <p class="slide-description">Расслабляющие процедуры для тела и души в нашем спа-центре</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Отель 3">
+                    <div class="slide-content">
+                        <h3 class="slide-title">Ресторан высокой кухни</h3>
+                        <p class="slide-description">Гастрономические изыски от нашего шеф-повара</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Отель 4">
+                    <div class="slide-content">
+                        <h3 class="slide-title">Бассейн с подогревом</h3>
+                        <p class="slide-description">Наслаждайтесь плаванием в любое время года</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Контролы для первого слайдера (стрелки и точки) -->
+        <div class="slider-controls">
+            <div class="slider-arrows">
+                <button class="arrow prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="arrow next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="dots">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+                <div class="dot" data-index="3"></div>
+            </div>
+        </div>
+
+        <!-- Миниатюры для навигации -->
+        <div class="thumbnails">
+            <div class="thumb active" data-index="0">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" alt="Отель 1">
+            </div>
+            <div class="thumb" data-index="1">
+                <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" alt="Отель 2">
+            </div>
+            <div class="thumb" data-index="2">
+                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" alt="Отель 3">
+            </div>
+            <div class="thumb" data-index="3">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&q=80" alt="Отель 4">
+            </div>
+        </div>
+        
+        <h2 class="section-title">Наши номера</h2>
+        
+        <!-- Второй слайдер с номерами отеля -->
+        <div class="rooms-slider">
+            <div class="rooms-slides-container">
+                <!-- Слайд 1 -->
+                <div class="room-slide">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Стандартный номер">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-name">Стандартный номер</h3>
+                            <p class="room-description">Уютный номер с современным дизайном, идеально подходящий для отдыха после насыщенного дня.</p>
+                            <div class="room-price">
+                                <span>4 500 ₽ <span class="price-period">/ за ночь</span></span>
+                                <button class="book-btn">Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 2 -->
+                <div class="room-slide">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Делюкс номер">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-name">Номер Делюкс</h3>
+                            <p class="room-description">Просторный номер с зоной для отдыха и панорамным видом на город или море.</p>
+                            <div class="room-price">
+                                <span>6 800 ₽ <span class="price-period">/ за ночь</span></span>
+                                <button class="book-btn">Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 3 -->
+                <div class="room-slide">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Люкс номер">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-name">Люкс</h3>
+                            <p class="room-description">Роскошный номер с отдельной гостиной зоной и ванной комнатой с гидромассажной ванной.</p>
+                            <div class="room-price">
+                                <span>9 200 ₽ <span class="price-period">/ за ночь</span></span>
+                                <button class="book-btn">Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 4 -->
+                <div class="room-slide">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Президентский люкс">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-name">Президентский люкс</h3>
+                            <p class="room-description">Эксклюзивный номер с собственной террасой, мини-баром и персональным обслуживанием.</p>
+                            <div class="room-price">
+                                <span>15 000 ₽ <span class="price-period">/ за ночь</span></span>
+                                <button class="book-btn">Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 5 -->
+                <div class="room-slide">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Семейный номер">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-name">Семейный номер</h3>
+                            <p class="room-description">Просторный номер с двумя раздельными зонами для родителей и детей, идеален для семейного отдыха.</p>
+                            <div class="room-price">
+                                <span>8 500 ₽ <span class="price-period">/ за ночь</span></span>
+                                <button class="book-btn">Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 6 -->
+                <div class="room-slide">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Бизнес-люкс">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-name">Бизнес-люкс</h3>
+                            <p class="room-description">Номер с рабочим кабинетом, современной техникой и всем необходимым для деловой поездки.</p>
+                            <div class="room-price">
+                                <span>11 000 ₽ <span class="price-period">/ за ночь</span></span>
+                                <button class="book-btn">Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 7 -->
+                <div class="room-slide">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Номер с балконом">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-name">Номер с балконом</h3>
+                            <p class="room-description">Уютный номер с собственным балконом, откуда открывается прекрасный вид на окрестности.</p>
+                            <div class="room-price">
+                                <span>7 200 ₽ <span class="price-period">/ за ночь</span></span>
+                                <button class="book-btn">Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 8 -->
+                <div class="room-slide">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1551516594-56cb78394645?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Эко-номер">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-name">Эко-номер</h3>
+                            <p class="room-description">Номер с экологически чистыми материалаи, натуральным текстилем и органической косметикой.</p>
+                            <div class="room-price">
+                                <span>8 900 ₽ <span class="price-period">/ за ночь</span></span>
+                                <button class="book-btn">Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Слайд 9 -->
+                <div class="room-slide">
+                    <div class="room-card">
+                        <div class="room-image">
+                            <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Романтический люкс">
+                        </div>
+                        <div class="room-details">
+                            <h3 class="room-name">Романтический люкс</h3>
+                            <p class="room-description">Специально оформленный номер для романтического отдыха с шампанским и цветами.</p>
+                            <div class="room-price">
+                                <span>12 500 ₽ <span class="price-period">/ за ночь</span></span>
+                                <button class="book-btn">Забронировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Стрелки для навигации -->
+            <button class="rooms-arrow prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="rooms-arrow next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Точки для мобильной навигации -->
+            <div class="rooms-dots">
+                <div class="room-dot active" data-index="0"></div>
+                <div class="room-dot" data-index="1"></div>
+                <div class="room-dot" data-index="2"></div>
+                <div class="room-dot" data-index="3"></div>
+                <div class="room-dot" data-index="4"></div>
+                <div class="room-dot" data-index="5"></div>
+                <div class="room-dot" data-index="6"></div>
+                <div class="room-dot" data-index="7"></div>
+                <div class="room-dot" data-index="8"></div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 Отель "Премиум Класс". Все права защищены.</p>
+            <p>Телефон: +7 (123) 456-78-90 | Email: info@premium-hotel.ru</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Первый слайдер
+            const slider = document.querySelector('.hotel-slider');
+            const slidesContainer = slider.querySelector('.slides-container');
+            const slides = slider.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.slider-arrows .prev');
+            const nextBtn = document.querySelector('.slider-arrows .next');
+            const dots = document.querySelectorAll('.dots .dot');
+            const thumbs = document.querySelectorAll('.thumb');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+            
+            // Инициализация слайдера
+            function initSlider() {
+                const firstClone = slides[0].cloneNode(true);
+                const lastClone = slides[slideCount - 1].cloneNode(true);
+                
+                firstClone.classList.add('clone');
+                lastClone.classList.add('clone');
+                
+                slidesContainer.appendChild(firstClone);
+                slidesContainer.insertBefore(lastClone, slides[0]);
+                
+                goToSlide(currentIndex + 1, false);
+            }
+            
+            // Переход к конкретному слайду
+            function goToSlide(index, animate = true) {
+                if (!animate) {
+                    slidesContainer.style.transition = 'none';
+                } else {
+                    slidesContainer.style.transition = 'transform 0.5s ease-in-out';
+                }
+                
+                slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+                currentIndex = index;
+                
+                updateDots();
+                updateThumbs();
+            }
+            
+            // Переход к следующему слайду
+            function nextSlide() {
+                if (currentIndex >= slideCount + 1) {
+                    goToSlide(1, false);
+                    setTimeout(() => goToSlide(2, true), 50);
+                } else {
+                    goToSlide(currentIndex + 1, true);
+                }
+            }
+            
+            // Переход к предыдущему слайду
+            function prevSlide() {
+                if (currentIndex <= 0) {
+                    goToSlide(slideCount, false);
+                    setTimeout(() => goToSlide(slideCount - 1, true), 50);
+                } else {
+                    goToSlide(currentIndex - 1, true);
+                }
+            }
+            
+            // Обновление активной точки
+            function updateDots() {
+                let dotIndex;
+                if (currentIndex === 0) {
+                    dotIndex = slideCount - 1;
+                } else if (currentIndex === slideCount + 1) {
+                    dotIndex = 0;
+                } else {
+                    dotIndex = currentIndex - 1;
+                }
+                
+                dots.forEach((dot, index) => {
+                    if (index === dotIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Обновление активной миниатюры
+            function updateThumbs() {
+                let thumbIndex;
+                if (currentIndex === 0) {
+                    thumbIndex = slideCount - 1;
+                } else if (currentIndex === slideCount + 1) {
+                    thumbIndex = 0;
+                } else {
+                    thumbIndex = currentIndex - 1;
+                }
+                
+                thumbs.forEach((thumb, index) => {
+                    if (index === thumbIndex) {
+                        thumb.classList.add('active');
+                    } else {
+                        thumb.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Обработка завершения перехода
+            slidesContainer.addEventListener('transitionend', function() {
+                if (currentIndex === slideCount + 1) {
+                    goToSlide(1, false);
+                } else if (currentIndex === 0) {
+                    goToSlide(slideCount, false);
+                }
+            });
+            
+            // Навигация с помощью стрелок
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Навигация с помощью точек
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index')) + 1;
+                    goToSlide(index, true);
+                });
+            });
+            
+            // Навигация с помощью миниатюр
+            thumbs.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index')) + 1;
+                    goToSlide(index, true);
+                });
+            });
+            
+            // Инициализируем слайдер
+            initSlider();
+            
+            // Обработка свайпов для мобильных устройств
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            slider.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            slider.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const minSwipeDistance = 50;
+                
+                if (touchStartX - touchEndX > minSwipeDistance) {
+                    nextSlide();
+                } else if (touchEndX - touchStartX > minSwipeDistance) {
+                    prevSlide();
+                }
+            }
+            
+            // Второй слайдер (номера отеля) - бесконечный
+            const roomsSlider = document.querySelector('.rooms-slider');
+            const roomsSlidesContainer = roomsSlider.querySelector('.rooms-slides-container');
+            const roomSlides = roomsSlider.querySelectorAll('.room-slide');
+            const roomsPrevBtn = roomsSlider.querySelector('.rooms-arrow.prev');
+            const roomsNextBtn = roomsSlider.querySelector('.rooms-arrow.next');
+            const roomDots = roomsSlider.querySelectorAll('.room-dot');
+            
+            let roomsCurrentIndex = 0;
+            const roomsSlideCount = roomSlides.length;
+            let slidesToShow = 1; // По умолчанию для мобильных
+            
+            // Инициализация бесконечного слайдера
+            function initRoomsSlider() {
+                // Клонируем первый и последний слайды
+                const firstClone = roomSlides[0].cloneNode(true);
+                const lastClone = roomSlides[roomsSlideCount - 1].cloneNode(true);
+                
+                firstClone.classList.add('clone');
+                lastClone.classList.add('clone');
+                
+                roomsSlidesContainer.appendChild(firstClone);
+                roomsSlidesContainer.insertBefore(lastClone, roomSlides[0]);
+                
+                // Устанавливаем начальную позицию
+                goToRoomsSlide(roomsCurrentIndex + 1, false);
+            }
+            
+            // Определяем количество отображаемых слайдов
+            function updateSlidesToShow() {
+                if (window.innerWidth >= 1200) {
+                    slidesToShow = 5;
+                } else if (window.innerWidth >= 992) {
+                    slidesToShow = 4;
+                } else if (window.innerWidth >= 768) {
+                    slidesToShow = 3;
+                } else if (window.innerWidth >= 576) {
+                    slidesToShow = 2;
+                } else {
+                    slidesToShow = 1;
+                }
+            }
+            
+            // Переход к конкретному слайду
+            function goToRoomsSlide(index, animate = true) {
+                if (!animate) {
+                    roomsSlidesContainer.style.transition = 'none';
+                } else {
+                    roomsSlidesContainer.style.transition = 'transform 0.5s ease-in-out';
+                }
+                
+                const slideWidth = 100 / (roomsSlideCount + 2); // +2 для клонов
+                roomsSlidesContainer.style.transform = `translateX(-${index * slideWidth}%)`;
+                roomsCurrentIndex = index;
+                
+                // Обновляем активную точку
+                updateRoomDots();
+            }
+            
+            // Переход к следующему слайду
+            function roomsNextSlide() {
+                if (roomsCurrentIndex >= roomsSlideCount + 1) {
+                    goToRoomsSlide(1, false);
+                    setTimeout(() => goToRoomsSlide(2, true), 50);
+                } else {
+                    goToRoomsSlide(roomsCurrentIndex + 1, true);
+                }
+            }
+            
+            // Переход к предыдущему слайду
+            function roomsPrevSlide() {
+                if (roomsCurrentIndex <= 0) {
+                    goToRoomsSlide(roomsSlideCount, false);
+                    setTimeout(() => goToRoomsSlide(roomsSlideCount - 1, true), 50);
+                } else {
+                    goToRoomsSlide(roomsCurrentIndex - 1, true);
+                }
+            }
+            
+            // Обновление активной точки
+            function updateRoomDots() {
+                let dotIndex;
+                if (roomsCurrentIndex === 0) {
+                    dotIndex = roomsSlideCount - 1;
+                } else if (roomsCurrentIndex === roomsSlideCount + 1) {
+                    dotIndex = 0;
+                } else {
+                    dotIndex = roomsCurrentIndex - 1;
+                }
+                
+                roomDots.forEach((dot, index) => {
+                    if (index === dotIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Обработка завершения перехода
+            roomsSlidesContainer.addEventListener('transitionend', function() {
+                if (roomsCurrentIndex === roomsSlideCount + 1) {
+                    goToRoomsSlide(1, false);
+                } else if (roomsCurrentIndex === 0) {
+                    goToRoomsSlide(roomsSlideCount, false);
+                }
+            });
+            
+            // Навигация с помощью стрелок
+            roomsNextBtn.addEventListener('click', roomsNextSlide);
+            roomsPrevBtn.addEventListener('click', roomsPrevSlide);
+            
+            // Навигация с помощью точек
+            roomDots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index')) + 1;
+                    goToRoomsSlide(index, true);
+                });
+            });
+            
+            // Инициализация второго слайдера
+            updateSlidesToShow();
+            initRoomsSlider();
+            
+            // Обработка изменения размера окна
+            window.addEventListener('resize', function() {
+                updateSlidesToShow();
+            });
+            
+            // Обработка свайпов для второго слайдера на мобильных
+            let roomsTouchStartX = 0;
+            let roomsTouchEndX = 0;
+            
+            roomsSlider.addEventListener('touchstart', function(e) {
+                roomsTouchStartX = e.changedTouches[0].screenX;
+            });
+            
+            roomsSlider.addEventListener('touchend', function(e) {
+                roomsTouchEndX = e.changedTouches[0].screenX;
+                handleRoomsSwipe();
+            });
+            
+            function handleRoomsSwipe() {
+                const minSwipeDistance = 50;
+                
+                if (roomsTouchStartX - roomsTouchEndX > minSwipeDistance) {
+                    roomsNextSlide();
+                } else if (roomsTouchEndX - roomsTouchStartX > minSwipeDistance) {
+                    roomsPrevSlide();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

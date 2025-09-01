@@ -1,0 +1,1792 @@
+/* font-family: 'Montserrat', sans-serif; */
+
+@font-face {
+    font-family: 'Forum';
+    src: url('../fonts/Forum-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Geologica';
+    src: url('../fonts/Geologica-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'geologica_thin';
+    src: url('../fonts/geologica-thin.woff2') format('woff2');
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 300;
+    line-height: 130%;
+    background-color: #F9F6ED;
+}
+
+.contentfont {
+    font-family: 'geologica_thin', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #454545;
+}
+
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title {
+    font-family: 'Forum', sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    object-fit: cover;
+}
+
+button {
+    border: none;
+}
+
+.container {
+    max-width: 1690px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.header_menu_mobile_btn {
+    display: none;
+}
+
+.header_container {
+    height: 100%;
+}
+
+.header {
+    font-family: 'Geologica', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    padding-top: 43px;
+    line-height: 130%;
+    height: 100vh;
+    height: 820px;
+    width: 100%;
+    /* background-image: url(../images/header_fon.jpg); */
+    background: linear-gradient(rgba(0, 0, 0, 0.7)), url('../images/header_fon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+
+    color: rgba(245, 245, 245, 0.8);
+    position: relative;
+}
+
+.header_top {
+    display: grid;
+    grid-template-columns: 102px auto;
+    grid-template-rows: repeat(2.1fr);
+    gap: 25px 85px;
+}
+
+.logo {
+    grid-row: span 2;
+}
+
+.header_contacts,
+.header_contacts_inner,
+.header_menu_list {
+    display: flex;
+    align-items: center;
+}
+
+.header_menu_list {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.header_contacts_inner {
+    padding-bottom: 18px;
+    border-bottom: 0.88px solid rgba(255, 255, 255, 0.3);
+}
+
+.header_contacts {
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.header_contacts_inner {
+    /* width: 100%; */
+    width: 80%;
+    /* width: 1152px; */
+}
+
+.header_contacts_adress {
+    font-size: 16px;
+    margin-right: 36px;
+}
+
+
+.lg_osnova a {
+    margin-right: 10px;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.header_contacts_tel {
+    margin-left: auto;
+}
+
+.header_contacts_tel {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btn {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.black_btn {
+    color: #454545;
+}
+
+
+.contacts_btn,
+.rules_btn {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 28px;
+    /* Закругленные углы */
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease;
+    width: 248px;
+    height: 54px;
+}
+
+/* Псевдоэлемент для градиентной рамки */
+.contacts_btn::before,
+.nomer_btn::before,
+.header_admin_img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 28px;
+    padding: 2px;
+    /* Толщина рамки */
+    background: linear-gradient(180deg, #BF9E77, #BD9D6F);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    transition: all .5s ease;
+}
+
+.header_admin_img::before {
+    background: linear-gradient(180deg, #AF864C, #BD9D6F);
+}
+
+.contacts_btn:hover {
+    background: linear-gradient(180deg, #BF9E77, #BD9D6F);
+
+}
+
+.gradient {
+    background: linear-gradient(180deg, #BF9E77, #BD9D6F);
+}
+
+.header_menu_list {
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.header_inner {
+    position: relative;
+    height: 820px;
+}
+
+.header_bottom {
+    position: absolute;
+    bottom: 70px;
+    left: 0px;
+}
+
+.header_title {
+    width: 494px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 50px;
+    margin-bottom: 32px;
+}
+
+.header_nomer {
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(28px);
+    width: 951px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #FFFFFF1A;
+    padding: 26px 26px 27px 23px;
+
+}
+
+.header_nomer_info+.header_nomer_info {
+    border-left: 1px solid rgba(245, 245, 245, 0.5);
+    padding-left: 21px;
+}
+
+.header_nomer_plan {
+    display: -webkit-box;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.header_nomer_info_name {
+    font-weight: 100;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.nomer_btn {
+    width: 202px;
+    height: 60px;
+    border-radius: 34px;
+    position: relative;
+}
+
+.nomer_btn:hover {
+    background: transparent;
+}
+
+.header_admin {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    width: 126px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header_admin_img {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    position: relative;
+    padding: 12px;
+    margin-bottom: 17px;
+    transition: all .5s ease;
+    background: linear-gradient(180deg, #AF864C, #BD9D6F)
+}
+
+.header_admin:hover .header_admin_img {
+    background: transparent;
+}
+
+.header_admin:hover .header_admin_img svg stop:nth-child(1) {
+    stop-color: #AF864C;
+}
+
+.header_admin:hover .header_admin_img svg stop:nth-child(2) {
+    stop-color: #BD9D6F;
+}
+
+.header_admin_img picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_admin:hover p,
+.nomer_btn:hover {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text !important;
+    background: linear-gradient(180deg, #AF864C, #BD9D6F);
+}
+
+
+.main_link {
+    margin-top: 40px;
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    color: #AAA7A5;
+
+}
+
+.main_link a:hover {
+    text-decoration: underline;
+}
+
+.nomerabout {
+    margin-top: 80px;
+    display: flex;
+    gap: 76px;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.nomerabout_info {
+    flex-basis: 618px;
+}
+
+.nomerabout_foto {
+    height: 540px;
+}
+
+.nomerabout_foto .slick-list {
+    width: 956px;
+}
+
+/* .nomerabout_foto img {
+    width: 956px;
+    height: 540px;
+} */
+
+.nomerabout_foto .arrow {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    bottom: 20px;
+    width: 74px;
+    height: 48px;
+    border-radius: 20px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.nomerabout_foto .arrow:hover {
+    background-color: rgba(201, 206, 108, 0.2);
+    border-radius: 20px;
+    width: 74px;
+    height: 48px;
+}
+
+.nomerabout_foto .slick_prev {
+    background-image: url(../images/slick/prev.svg);
+    left: 16px;
+
+}
+
+.nomerabout_foto .slick_next {
+    background-image: url(../images/slick/next.svg);
+    left: 106px;
+}
+
+.nomerabout_info_osnova {
+    display: flex;
+    gap: 77px;
+    margin-bottom: 12px;
+}
+
+.nomerabout_info_osnova_name {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.nomerabout_info_osnova_price {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.nomerabout_info_osnova_razm {
+    font-family: 'geologica_thin', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.nomerabout_info_aktyal {
+    font-family: 'geologica_thin', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.nomerabout_info_opisanie {
+    margin: 61px 0;
+}
+
+.enable {
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    color: #656565;
+}
+
+.enable_name {
+    color: #454545;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Geologica', sans-serif;
+    margin-bottom: 40px;
+}
+
+.enable_osnova {
+    margin-right: 20px;
+}
+
+.enable_osnova_list {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.enable_osnova_item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.enable_nomer_list {
+    /* list-style-type: disc; */
+    counter-reset: gradient-counter;
+}
+
+.enable_nomer_item {
+    counter-increment: gradient-counter;
+    margin-left: 18px;
+    position: relative;
+    height: 26px;
+}
+
+.enable_nomer_item::before {
+    content: counter(gradient-counter);
+    font-size: 0px;
+    position: absolute;
+    /* left: 15px; */
+    top: 25%;
+    margin-left: -18px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(180deg, #BF9E77 0%, #BD9D6F 100%);
+}
+
+
+
+.enable_nomer_list_column {
+    column-count: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    gap: 130px;
+}
+
+.enable_nomer_baf {
+    margin-right: 140px;
+}
+
+.rules {
+    margin-top: 180px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+
+}
+
+.rules_title {
+    font-size: 32px;
+}
+
+.rules_spisok_list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.rules_spisok_que {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 0;
+    border-bottom: 1px solid #DBD4D1;
+}
+
+.rules_spisok_item:first-child .rules_spisok_que {
+    border-top: 1px solid #DBD4D1;
+    border-bottom: 1px solid #DBD4D1;
+}
+
+.rules_spisok_que picture {
+    margin-left: auto;
+    margin-right: 24px;
+    transition: all 1s;
+}
+
+.active .rules_spisok_que picture {
+    transform: rotate(45deg);
+}
+
+.rules_spisok_otvet {
+    margin-left: 0px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #eed8ca;
+    padding: 0 20px;
+    border-radius: 10px;
+    counter-reset: gradient-counter;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s, padding 1s, margin-top 1s;
+}
+
+.active .rules_spisok_otvet {
+    margin-top: 30px;
+    max-height: 1000px;
+    padding: 20px 20px;
+}
+
+.rules_spisok_otvet_item {
+    counter-increment: gradient-counter;
+    margin-left: 20px;
+    position: relative;
+}
+
+
+
+.rules_spisok_otvet_item::before {
+    content: counter(gradient-counter);
+    font-size: 0px;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-5px);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(180deg, #BF9E77 0%, #BD9D6F 100%);
+}
+
+.rules_spisok_otvet_item span {
+    font-weight: bold;
+}
+
+.otvet_item_vosk {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.rules_kratko {
+    color: #F5F5F5;
+    padding: 50px;
+    height: 100%;
+    position: relative;
+}
+
+.rules_kratko_title {
+    font-size: 32px;
+    max-width: 336px;
+}
+
+.rules_kratko_text {
+    color: #F5F5F5;
+    margin-top: 32px;
+    max-width: 444px;
+}
+
+.rules_btn {
+    position: absolute;
+    width: 222px;
+    height: 54px;
+    border: 1.5px solid #F5F5F5;
+    bottom: 50px;
+    /* transition: all .5s ease; */
+}
+
+.rules_btn:hover {
+    background-color: rgba(245, 245, 245, 0.2);
+}
+
+.othernomer {
+    margin-top: 180px;
+    position: relative;
+}
+
+.othernomer_title {
+    font-size: 50px;
+}
+
+
+.othernomer_inner .slick-track {
+    margin-top: 60px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 15px; */
+}
+
+.othernomer_about.slick-slide+.othernomer_about.slick-slide {
+    margin-left: 15px;
+}
+
+.othernomer_about {
+    width: calc(100% / 3 - 30px);
+}
+
+.othernomer_about_picture {
+    height: 330px;
+    color: #fff;
+    position: relative;
+}
+
+.othernomer_about_osn {
+    display: flex;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.othernomer_about_xarakter {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 16px;
+    border-radius: 21px;
+    padding: 11px 24px;
+}
+
+.othernomer_about_price {
+    font-size: 22px;
+    margin-left: 28px;
+}
+
+.othernomer_about_info {
+    margin-top: 32px;
+}
+
+.othernomer_about_name {
+    font-size: 22px;
+}
+
+.othernomer_about_text {
+    color: #656565;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-size: 18px;
+}
+
+.othernomer_about_btn {
+    height: 54px;
+    margin-right: 20px;
+}
+
+.othernomer_about_podrob {
+    width: 168px;
+    height: 54px;
+}
+
+.othernomer_inner .arrow {
+    position: absolute;
+    top: -40px;
+    z-index: 1;
+    width: 74px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: all .5s ease;
+    border-radius: 22px;
+
+}
+
+.othernomer_inner .arrow:hover {
+    background-color: rgba(201, 206, 108, 0.2);
+    border-radius: 22px;
+    width: 73px;
+    height: 45px;
+}
+
+
+.othernomer_inner .slick_prev {
+    background-image: url(../images/slick/other_prev.svg);
+    right: 90px;
+
+}
+
+.othernomer_inner .slick_next {
+    background-image: url(../images/slick/other_next.svg);
+    right: 0px;
+}
+
+.footer {
+    margin-top: 180px;
+    height: 570px;
+    padding-top: 44px;
+    background-color: #262220;
+    position: relative;
+}
+
+.footer_wap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.footer_inner {
+    color: #F5F5F5;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer_address {
+    margin-top: 54px;
+}
+
+.footer_address_karta {
+    display: block;
+    margin-bottom: 24px;
+}
+
+.footer_address_tel {
+    display: block;
+}
+
+.footer_address_tel+.footer_address_tel {
+    margin-top: 10px;
+}
+
+.footer_right {
+    display: flex;
+    gap: 80px;
+    margin-right: 75px;
+    margin-top: 16px;
+}
+
+.footer_btn {
+    margin-top: 40px;
+    width: 187px;
+}
+
+.footer_right_name {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Geologica', sans-serif;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 32px;
+}
+
+.footer_right_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer_podval {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 124px;
+    padding-top: 24px;
+    padding-bottom: 34px;
+    color: rgba(255, 255, 255, 0.5);
+    border-top: 0.88px solid rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+    /* position: absolute; */
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer_podval_link {
+    display: flex;
+    gap: 98px;
+    margin-right: 124px;
+}
+
+@media (max-width: 1700px) {
+    .enable_nomer_baf {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 1440px) {
+
+    .container {
+        max-width: 1320px;
+    }
+
+    .contentfont {
+        font-size: 17px;
+    }
+
+
+    .header {
+        padding-top: 20px;
+    }
+
+    .header_top {
+        grid-template-columns: 90px auto;
+        gap: 16px 40px;
+    }
+
+    .header_bottom_inner {
+        padding-bottom: 16px;
+    }
+
+    .header_menu {
+        font-size: 16px;
+    }
+
+    .header_contacts_tel {
+        font-size: 16px;
+    }
+
+    .header_contacts_adress {
+        margin-right: 32px;
+    }
+
+    .header_title {
+        margin-bottom: 40px;
+    }
+
+    .header_nomer {
+        width: 800px;
+    }
+
+    .header_bottom {
+        bottom: 60px;
+    }
+
+    .main_link {
+        margin-top: 32px;
+    }
+
+    .nomerabout {
+        gap: 32px;
+    }
+
+    .nomerabout_info {
+        flex-basis: 588px;
+    }
+
+
+    .nomerabout_foto {
+        height: 418px;
+    }
+
+    .nomerabout_info_osnova_name {
+        margin-bottom: 30px;
+        gap: 8px;
+    }
+
+    .enable_nomer_baf {
+        margin-right: 0px;
+    }
+
+    .nomerabout_foto .slick-list {
+        width: 632px;
+    }
+
+    .nomerabout_info_opisanie {
+        margin: 41px 0;
+    }
+
+    .nomerabout_foto .arrow {
+        bottom: 26px;
+    }
+
+    .enable {
+        margin-top: 150px;
+    }
+
+    .enable_nomer_list_column {
+        gap: 70px;
+        font-size: 17px;
+    }
+
+    .rules {
+        margin-top: 150px;
+    }
+
+    .rules {
+        gap: 50px;
+    }
+
+    .rules_spisok_otvet {
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .active .rules_spisok_otvet {
+        padding: 10px 10px;
+    }
+
+    .othernomer {
+        margin-top: 150px;
+    }
+
+    .othernomer_inner .slick-track {
+        margin-top: 44px;
+    }
+
+    .othernomer_about_picture {
+        height: 278px;
+    }
+
+
+    .othernomer_about_osn {
+        left: 12px;
+        bottom: 12px;
+        gap: 8px;
+    }
+
+
+    .othernomer_about_xarakter {
+        padding: 9px 12px;
+        font-size: 14px;
+    }
+
+    .othernomer_about_price {
+        font-size: 17px;
+        margin-left: auto;
+    }
+
+
+    .footer {
+        margin-top: 150px;
+        padding-top: 40px;
+    }
+
+    .footer_address {
+        margin-top: 50px;
+    }
+
+    .footer_right {
+        margin-right: 0px;
+        gap: 70px;
+    }
+
+    .footer_podval_link {
+        margin-right: 49px;
+        gap: 86px;
+    }
+
+    /*   .othernomer_about_info {
+        margin-bottom: 24px;
+    }
+
+    .othernomer_about_name {
+        font-size: 18px;
+    }
+
+    .othernomer_about_text {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }*/
+
+
+
+
+
+}
+
+@media (max-width: 1140px) {
+    .nomer_btn {
+        width: 164px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+
+    .othernomer_about_btn {
+        height: 44px;
+        margin-right: 12px;
+    }
+
+    .othernomer_about_podrob {
+        width: 133px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+
+
+    .container {
+        max-width: 984px;
+    }
+
+    .contentfont {
+        font-size: 15px;
+    }
+
+    .btn {
+        width: 207px;
+        height: 44px;
+    }
+
+    .nomer_btn {
+        width: 160px;
+    }
+
+    .header_top {
+        grid-template-columns: 67px auto;
+        gap: 13px 28px;
+    }
+
+    .header_contacts_adress {
+        font-size: 14px;
+    }
+
+    .header_contacts_adress {
+        margin-right: 25px;
+    }
+
+    .lg_osnova a {
+        margin-right: 5px;
+        font-size: 15px
+    }
+
+    .header_contacts_tel {
+        font-size: 14px;
+    }
+
+    .header_menu {
+        font-size: 14px;
+    }
+
+    .header_menu_list {
+        justify-content: flex-start;
+    }
+
+    .header_bottom {
+        bottom: 40px;
+    }
+
+    .header_title {
+        font-size: 42px;
+    }
+
+    .header_nomer {
+        width: 700px;
+        padding: 16px 24px 16px 16px
+    }
+
+    .header_nomer_info_name {
+        font-size: 12px;
+    }
+
+    .header_nomer_plan {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .header_admin {
+        font-size: 12px;
+    }
+
+    .header_admin_img {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+
+    .header_admin_img svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .nomerabout {
+        margin-top: 60px;
+        gap: 32px;
+    }
+
+    .nomerabout_foto {
+        height: 320px;
+    }
+
+    .nomerabout_foto .slick-list {
+        height: 320px;
+        width: 484px;
+    }
+
+    .nomerabout_foto .arrow {
+        width: 56px;
+        height: 34px;
+        bottom: 16px;
+    }
+
+    .nomerabout_foto .slick_next {
+        left: 84px;
+    }
+
+    .nomerabout_foto .arrow:hover {
+        width: 56px;
+        height: 34px;
+    }
+
+    .nomerabout_info_osnova {
+        margin-bottom: 8px;
+        gap: 40px;
+    }
+
+    .nomerabout_info_osnova_name {
+        font-size: 15px;
+        margin-bottom: 9px;
+    }
+
+    .nomerabout_info_osnova_price {
+        font-size: 18px;
+        margin-bottom: 4px;
+    }
+
+    .nomerabout_info_opisanie {
+        margin: 25px 0;
+    }
+
+    .enable {
+        margin-top: 120px;
+    }
+
+
+
+    .enable_name {
+        font-size: 18px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .enable_osnova_list {
+        gap: 0px;
+    }
+
+    .enable_osnova_item {
+        gap: 8px;
+        height: 50px;
+    }
+
+    .enable_nomer_list_column {
+        gap: 40px;
+        font-size: 14px;
+    }
+
+    .enable_nomer_item {
+        height: 18px;
+    }
+
+    .rules {
+        margin-top: 120px;
+    }
+
+    .rules_title {
+        font-size: 30px;
+    }
+
+    .rules_spisok_que {
+        padding: 12px 0;
+    }
+
+    .active .rules_spisok_otvet {
+        margin-top: 10px;
+    }
+
+    .rules_spisok_otvet {
+        font-size: 12px;
+    }
+
+    .otvet_item_vosk {
+        font-size: 15px;
+    }
+
+    .rules_kratko {
+        padding: 32px;
+    }
+
+    .rules_kratko_title {
+        font-size: 30px;
+    }
+
+    .rules_btn {
+        width: 160px;
+        height: 44px;
+    }
+
+    .othernomer {
+        margin-top: 120px;
+    }
+
+    .othernomer_title {
+        font-size: 38px;
+    }
+
+    .othernomer_inner .slick-track {
+        margin-top: 38px;
+        gap: 15px;
+    }
+
+    .othernomer_inner .arrow {
+        width: 56px;
+        height: 34px;
+    }
+
+    .othernomer_inner .arrow:hover {
+        width: 55px;
+        height: 34px;
+    }
+
+    .othernomer_inner .slick_prev {
+        right: 68px;
+    }
+
+    .othernomer_about_osn {
+        left: 10px;
+        bottom: 10px;
+        gap: 8px;
+        flex-wrap: wrap;
+
+    }
+
+    .othernomer_about_xarakter {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .othernomer_about_price {
+        font-size: 15px;
+        margin-right: 5px;
+    }
+
+    .othernomer_about_info {
+        margin-top: 32px;
+    }
+
+    .othernomer_about_name {
+        font-size: 18px;
+    }
+
+    .othernomer_about_text {
+        font-size: 14px;
+    }
+
+    .othernomer_about_podrob {
+        width: 133px;
+    }
+
+    .othernomer_about_btn {
+        margin-right: 2px;
+    }
+
+    .footer {
+        height: 476px;
+        margin-top: 120px;
+    }
+
+    .footer_right_name {
+        font-size: 17px;
+    }
+
+    .footer_right {
+        gap: 32px;
+    }
+
+    .footer_btn {
+        width: 184px;
+    }
+
+    .footer_podval {
+        padding-top: 22px;
+        font-size: 14px;
+        padding-bottom: 32px;
+    }
+
+    .footer_podval_link {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 890px) {
+
+    .header_admin {
+        bottom: 160px;
+
+    }
+
+    .enable {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .enable_osnova {
+        grid-column: span 2;
+    }
+
+    .enable_osnova .enable_name {
+        margin-top: 0px;
+    }
+
+    .enable_osnova_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+
+    .enable_osnova_item {
+        border-right: 1px solid #DBD4D1;
+        padding-left: 5px;
+    }
+
+    .enable_osnova_item:last-child {
+        border-right: none
+    }
+
+    .enable_nomer_baf {
+        margin-left: auto;
+    }
+
+    .nomerabout {
+        display: grid;
+    }
+
+    .nomerabout_foto {
+        width: 484px;
+        margin: 0 auto;
+        order: 2;
+    }
+
+
+    .othernomer_about_price {
+        margin-left: inherit;
+    }
+
+    .othernomer_about_btn {
+        width: 120px;
+    }
+
+    .othernomer_about_podrob {
+        width: 100px;
+    }
+
+    .footer_btn {
+        width: 155px;
+    }
+
+    .nomerabout .slick-dots,
+    .othernomer .slick-dots {
+        display: flex;
+        gap: 8px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .nomerabout .slick-dots li,
+    .othernomer .slick-dots li {
+        width: 9px;
+        height: 9px;
+    }
+
+    .nomerabout .slick-dots li button,
+    .othernomer .slick-dots li button {
+        font-size: 0px;
+        background-color: #E4D6B7;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+    }
+
+    .nomerabout .slick-dots .slick-active button,
+    .othernomer .slick-dots .slick-active button {
+        background: linear-gradient(180deg, #BF9E77, #BD9D6F);
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 0px 16px;
+    }
+
+    .header {
+        padding-top: 13px;
+    }
+
+    .header,
+    .header_inner {
+        height: 100vh;
+    }
+
+    .header_menu,
+    .header_contacts {
+        display: none;
+    }
+
+    .header_menu_mobile_btn {
+        display: block;
+        background-color: transparent;
+        position: absolute;
+        right: 0;
+        top: 21px;
+        cursor: pointer;
+    }
+
+    .header_admin {
+        display: none;
+    }
+
+    /* .header_menu_list {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: baseline;
+        gap: 12px;
+        font-weight: 250;
+        font-size: 16px;
+    }
+
+    .header_contacts{
+        background-color: #262220;
+        width: 304px;
+        height: 667px;
+    }
+
+    .header_menu {
+        margin-top: 60px;
+    }
+
+    .header_top {
+        position: relative;
+    }
+
+    .header_contacts_lg {
+        margin-left: auto;
+    }
+
+    .header_contacts_inner {
+        border: none;
+    }
+
+    .header_contacts_adress {
+        position: absolute;
+        bottom: -105px;
+    }
+
+    .header_contacts_tel {
+        position: absolute;
+        bottom: -75px;
+        color: #BD9D6F;
+        font-weight: 200;
+        font-size: 16px;
+    }
+
+    .header_top_btn {
+        position: absolute;
+        bottom: -165px;
+        font-weight: 200;
+        font-size: 14px;
+    } */
+
+    .header_title {
+        width: auto;
+        font-size: 34px;
+        margin-bottom: 24px;
+    }
+
+    .header_bottom {
+        width: 100%;
+    }
+
+    .header_nomer {
+        width: auto;
+        flex-wrap: wrap;
+        gap: 12px 0px;
+        padding: 20px 24px;
+    }
+
+    .header_nomer_info {
+        padding-bottom: 4px;
+        border-bottom: 1px solid #F5F5F5
+    }
+
+    .header_nomer_info:first-child,
+    .header_nomer_info:nth-child(2) {
+        width: 45%;
+    }
+
+    .header_nomer_info:nth-child(3) {
+        width: 100%;
+    }
+
+    .header_nomer_info+.header_nomer_info {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .header_nomer_info_name {
+        margin-bottom: 0px;
+    }
+
+    .header_nomer_btn {
+        width: 100%;
+    }
+
+    .header_nomer_plan {
+        position: relative;
+    }
+
+    .header_nomer_plan img {
+        position: absolute;
+        right: 0;
+    }
+
+    .main_link {
+        margin-top: 50px;
+        font-size: 14px;
+    }
+
+    .nomerabout {
+        margin-top: 73px;
+        gap: 0px;
+
+    }
+
+    .nomerabout_info {
+        /* padding-bottom: 70px; */
+    }
+
+    .nomerabout_info::after {
+        content: '';
+        display: block;
+        width: 152px;
+        height: 2px;
+        background: linear-gradient(180deg, #BF9E77, #BD9D6F);
+        margin-top: 70px;
+    }
+
+    .nomerabout_foto {
+        padding-top: 24px;
+    }
+
+    .nomerabout_foto,
+    .nomerabout_foto .slick-list {
+        width: 343px;
+        height: 248px;
+    }
+
+    .nomerabout_info_osnova_razm,
+    .nomerabout_info_aktyal {
+        font-size: 12px;
+
+    }
+
+    .enable {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: baseline;
+    }
+
+    .enable_osnova_list {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .enable_name {
+        margin-top: 0px;
+        font-size: 17px;
+    }
+
+    .enable_osnova_item {
+        border-right: none;
+        height: 26px;
+    }
+
+    .enable_nomer_baf {
+        margin-left: inherit;
+    }
+
+    .rules {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rules_title {
+        font-size: 28px;
+    }
+
+    .rules_kratko {
+        padding: 20px;
+    }
+
+    .rules_kratko_title {
+        font-size: 30px;
+    }
+
+    .rules_kratko_text {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .rules_btn {
+        position: relative;
+        bottom: 0;
+    }
+
+    .othernomer_inner .slick-track {
+        margin-top: 32px;
+    }
+
+    .othernomer_about_price {
+        font-size: 14px;
+    }
+
+    .othernomer_about_info {
+        margin-top: 28px;
+    }
+
+    .othernomer_about_text {
+        margin-top: 12px;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer_wap {
+        gap: 100px;
+    }
+
+    .footer_inner,
+    .footer_right,
+    .footer_podval,
+    .footer_podval_link {
+        flex-direction: column;
+    }
+
+    .footer_inner {
+        gap: 0px;
+    }
+
+    .footer_address {
+        margin-top: 50px;
+    }
+
+    .footer_address_karta {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .footer_address_tel {
+        font-size: 14px;
+    }
+
+    .footer_address_tel+.footer_address_tel {
+        margin-top: 8px;
+    }
+
+    .footer_right {
+        margin-top: 40px;
+    }
+
+    .footer_podval {
+        padding-top: 23px;
+        font-weight: 250;
+        padding-bottom: 40px;
+    }
+
+    .footer_podval_link {
+        gap: 12px;
+    }
+
+    .footer_god{
+        margin-bottom: 12px;
+    }
+
+
+
+
+}
+
+
+@media (max-width: 360px) {
+    .header_title {
+        font-size: 30px;
+    }
+
+    .nomerabout_foto,
+    .nomerabout_foto .slick-list,
+    .nomerabout_foto .slick-list img {
+        width: 300px;
+        height: 248px;
+    }
+
+    .rules_kratko_title {
+        font-size: 28px;
+    }
+}
