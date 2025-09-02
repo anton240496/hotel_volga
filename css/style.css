@@ -1775,10 +1775,7 @@ button {
 
 
 
-    .footer_right_name img {
-        display: inline-block;
-        margin-left: 10px;
-    }
+
 
     .footer_right_name {
         margin-bottom: 0px;
@@ -1799,9 +1796,15 @@ button {
         max-height: 1000px;
     }
 
+    .footer_right_name img {
+        display: inline-block;
+        margin-left: 10px;
+        transition: all .5s;
+    }
 
-
-
+    .active .footer_right_name img {
+        transform: rotate(180deg);
+    }
 
 }
 
