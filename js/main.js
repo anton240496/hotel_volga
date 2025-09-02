@@ -31,7 +31,6 @@ $('.nomerabout_foto').slick({
 
 $('.othernomer_inner').slick({
     infinite: true,
-    // variableWidth: true,
     slidesToShow: 3,
     slidesToScroll: 3,
     prevArrow: '<div class=" arrow slick_prev"></div>',
@@ -57,3 +56,18 @@ $('.othernomer_inner').slick({
         }
     ]
 });
+
+    if (window.innerWidth < 769) {
+document.addEventListener('DOMContentLoaded', function () {
+    const faqQuestions = document.querySelectorAll('.footer_right_name');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle('active');
+        });
+    });
+});
+
+
+    }

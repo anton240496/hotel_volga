@@ -863,6 +863,11 @@ button {
     margin-right: 124px;
 }
 
+
+.footer_right_name img {
+    display: none;
+}
+
 @media (max-width: 1700px) {
     .enable_nomer_baf {
         margin-right: 0px;
@@ -1764,15 +1769,47 @@ button {
         gap: 12px;
     }
 
-    .footer_god{
+    .footer_god {
         margin-bottom: 12px;
     }
+
+
+
+    .footer_right_name img {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .footer_right_name {
+        margin-bottom: 0px;
+        transition: all .5s ease;
+    }
+
+    .active .footer_right_name {
+        margin-bottom: 32px;
+    }
+
+    .footer_right_list {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+
+    .active .footer_right_list {
+        max-height: 1000px;
+    }
+
 
 
 
 
 }
 
+@media (max-width: 430px) {
+    .enable_nomer_list {
+        font-size: 12px;
+    }
+}
 
 @media (max-width: 360px) {
     .header_title {
@@ -1788,5 +1825,9 @@ button {
 
     .rules_kratko_title {
         font-size: 28px;
+    }
+
+    .enable_nomer_list_column {
+        -webkit-columns: 1;
     }
 }
