@@ -57,17 +57,32 @@ $('.othernomer_inner').slick({
     ]
 });
 
-    if (window.innerWidth < 769) {
-document.addEventListener('DOMContentLoaded', function () {
-    const faqQuestions = document.querySelectorAll('.footer_right_name');
+if (window.innerWidth < 769) {
+    document.addEventListener('DOMContentLoaded', function () {
+        const faqQuestions = document.querySelectorAll('.footer_right_name');
 
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const faqItem = question.parentElement;
-            faqItem.classList.toggle('active');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
         });
     });
-});
 
 
-    }
+}
+
+
+const menubtn = document.querySelector('.header_menu_mobile_btn');
+const menu = document.querySelector('.header_wap');
+
+menubtn.addEventListener('click', () => {
+    menu.classList.add('header_wap_open')
+})
+
+const menu_close = document.querySelector('.menu_close');
+
+menu_close.addEventListener('click', () => {
+    menu.classList.remove('header_wap_open')
+})
+
